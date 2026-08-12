@@ -1,0 +1,39 @@
+{
+  "_comment": "Consolidated config for the LSP demo notebook. Paths are relative to the notebook's working directory.",
+
+  "campaign_name": "SFBA",
+  "date": "20161103",
+  "site_dw": "ma",
+  "site_id": "SF_LAB",
+
+  "data_dir": "./demo_data",
+  "traj_dir": "./demo_data/traj",
+  "df_dens_path": "./demo_data/df_dens.parquet",
+  "site_params_path": "./demo_data/site_params.pkl",
+  "observations_path": "./demo_data/em27-retrieval-bundle-ma-proffast-2_4-GGG2020-20161102-20161104.parquet",
+  "peak_data_path": "./demo_data/peak_data.parquet",
+  "averaging_kernel_path": "./demo_data/ma_avk_CH4_2020.json",
+  "output_dir": "./demo_output",
+
+  "target_gas": "ch4",
+  "quantile": 0.1,
+  "roll_time": "60min",
+  "prominence": 0.005,
+
+  "hi_res_time_resolution": 0.03333333333333333,
+  "trajectory_cutoff_minutes": -60,
+  "peak_window_minutes": 15,
+
+  "drf": 0.2,
+  "dr": 0.01,
+  "rad_max_km": 7,
+  "max_radial_steps": 350,
+  "source_altitude_bins": 11,
+  "max_source_altitude_m": 100,
+
+  "max_peaks": 1,
+  "release_heights": 10,
+
+  "plot": true,
+  "colormap_plots": "viridis"
+}

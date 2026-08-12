@@ -1,0 +1,357 @@
+{
+    "config": {
+        "general": {
+            "retro_version": "0.5",
+            "hysplit_version": "5.4.2",
+            "processing_directory": "/dev/shm/retro-processing/l40694.lvt.dkrz.de-3329118",
+            "results_directory": "/work/bb1473/moritz/beta-stilt-results-sfba",
+            "apply_hyper_near_field_correction": true,
+            "apply_particle_uncertainty_blur": false,
+            "apply_antialiasing": false,
+            "elevated_influence_methods": [],
+            "store_trajectories": true,
+            "max_particle_simulation_runtime": 1500.0,
+            "optimize_cpu_affinity": false,
+            "skip_particle_runs": false,
+            "skip_footprint_merging": false,
+            "max_merging_threads_per_node": 24
+        },
+        "meteorology": {
+            "file_access_mode": "copy",
+            "met_files_patterns": [
+                "/work/bb1473/met/hrrr/hysplit.$(YYYY)$(MM)$(DD).00z.hrrra.cropped_34.7000N-40.7000N_126.2000W-118.2000W.ARL",
+                "/work/bb1473/met/hrrr/hysplit.$(YYYY)$(MM)$(DD).06z.hrrra.cropped_34.7000N-40.7000N_126.2000W-118.2000W.ARL",
+                "/work/bb1473/met/hrrr/hysplit.$(YYYY)$(MM)$(DD).12z.hrrra.cropped_34.7000N-40.7000N_126.2000W-118.2000W.ARL",
+                "/work/bb1473/met/hrrr/hysplit.$(YYYY)$(MM)$(DD).18z.hrrra.cropped_34.7000N-40.7000N_126.2000W-118.2000W.ARL"
+            ],
+            "ggg2020_map_file_patterns": [
+                "/work/bb1473/met/ggg2020/$(YYYY)/$(YYYY)$(MM)$(DD)$(HH)_$(LAT)$(LON).map"
+            ],
+            "crop_met_files": false,
+            "crop_met_files_buffer": 2.0,
+            "crop_surface_inputs": true,
+            "crop_surface_inputs_buffer": 3.0,
+            "surface_input_resolution": "0p01",
+            "surface_elevation_source": "hydroshed",
+            "surface_roughness_source": "glcnmo",
+            "surface_landuse_source": "glcnmo"
+        },
+        "hysplit": {
+            "vertical_motion_method": "0:data",
+            "modeling_domain_top": 20000.0,
+            "advanced_config": {
+                "TERRFLG": 1
+            },
+            "additional_trajectory_variables": []
+        },
+        "jobs": []
+    },
+    "release": {
+        "particles_per_release_point": 500,
+        "sensor_type": "total-column",
+        "receptors_time_steps": "15m",
+        "min_sun_elevation": 10.0,
+        "release_heights": [
+            1.0,
+            6.0,
+            12.0,
+            25.0,
+            37.0,
+            50.0,
+            63.0,
+            75.0,
+            87.0,
+            100.0,
+            150.0,
+            200.0,
+            300.0,
+            400.0,
+            600.0,
+            800.0,
+            1000.0,
+            1500.0,
+            2000.0,
+            2800.0
+        ],
+        "release_heights_schema": "meters-above-instrument"
+    },
+    "start_timestamp": 1750853543.4083474,
+    "end_timestamp": 1750855377.8280094,
+    "particles_per_release_point": null,
+    "domain": {
+        "from_lat": 35.7,
+        "to_lat": 39.7,
+        "from_lon": -125.2,
+        "to_lon": -119.2,
+        "simulation_time": 24,
+        "surface_grid": {
+            "grid_id": "san-francisco-default",
+            "lat_step_size": "0.01°",
+            "lon_step_size": "0.01°",
+            "time_step_size": "1h"
+        },
+        "boundary_grid": {
+            "grid_id": "san-francisco-default",
+            "lat_step_size": "0.05°",
+            "lon_step_size": "0.05°",
+            "time_step_size": "15m",
+            "vertical_coordinate_scheme": "meters-asl",
+            "levels": [
+                0.0,
+                200.0,
+                400.0,
+                600.0,
+                800.0,
+                1000.0,
+                1200.0,
+                1400.0,
+                1600.0,
+                1800.0,
+                2000.0,
+                2200.0,
+                2400.0,
+                2600.0,
+                2800.0,
+                3000.0,
+                3200.0,
+                3400.0,
+                3600.0,
+                3800.0,
+                4000.0,
+                4200.0,
+                4400.0,
+                4600.0,
+                4800.0,
+                5000.0,
+                5200.0,
+                5400.0,
+                5600.0,
+                5800.0,
+                6000.0,
+                6200.0,
+                6400.0,
+                6600.0,
+                6800.0,
+                7000.0,
+                7200.0,
+                7400.0,
+                7600.0,
+                7800.0,
+                8000.0
+            ]
+        }
+    },
+    "met_files": {
+        "hysplit.20161103.18z.hrrra.cropped_34.7000N-40.7000N_126.2000W-118.2000W.ARL": "c21afc5a8c8a5fa49e5cbfaae6d66195",
+        "hysplit.20161102.18z.hrrra.cropped_34.7000N-40.7000N_126.2000W-118.2000W.ARL": "8a53e76d660bdc9ddd78ab49449a7f2f",
+        "hysplit.20161104.18z.hrrra.cropped_34.7000N-40.7000N_126.2000W-118.2000W.ARL": "f2c75a7860d6dc97e5b23b5bc3c850a4",
+        "hysplit.20161104.06z.hrrra.cropped_34.7000N-40.7000N_126.2000W-118.2000W.ARL": "4327116d3f9801c74669ead5dee3f1b1",
+        "hysplit.20161102.12z.hrrra.cropped_34.7000N-40.7000N_126.2000W-118.2000W.ARL": "138aff38bc3a701acf7a8eeec7902e00",
+        "hysplit.20161103.00z.hrrra.cropped_34.7000N-40.7000N_126.2000W-118.2000W.ARL": "5e066694cd9621da6b98468f25696b6f",
+        "hysplit.20161103.06z.hrrra.cropped_34.7000N-40.7000N_126.2000W-118.2000W.ARL": "6ec43a4c3df3cabf4c610b8bd679b85a",
+        "hysplit.20161102.00z.hrrra.cropped_34.7000N-40.7000N_126.2000W-118.2000W.ARL": "e34b8373a5bdf94741398bebcca2715a",
+        "hysplit.20161104.00z.hrrra.cropped_34.7000N-40.7000N_126.2000W-118.2000W.ARL": "6c2511ade87ff9f2cf956569bef17a57",
+        "hysplit.20161102.06z.hrrra.cropped_34.7000N-40.7000N_126.2000W-118.2000W.ARL": "254f8601dda4958f894be6bf93fa98f8",
+        "hysplit.20161104.12z.hrrra.cropped_34.7000N-40.7000N_126.2000W-118.2000W.ARL": "9ec6397eefbcd30db9da114663ff5c3f",
+        "hysplit.20161103.12z.hrrra.cropped_34.7000N-40.7000N_126.2000W-118.2000W.ARL": "650ca99952d563725ce0d816052465ea"
+    },
+    "receptor": {
+        "location": {
+            "location_id": "SF_LAB",
+            "details": "San Francisco, In the lab (should not be included in any campaign)",
+            "lon": -122.25737,
+            "lat": 37.87577,
+            "alt_asl": 121.0,
+            "alt_agl": 1.0
+        },
+        "dt": "2016-11-03T16:15:00Z",
+        "variant": "total-column",
+        "release_points": [
+            {
+                "lat": 37.875752,
+                "lon": -122.257338,
+                "alt_asl": 122.0,
+                "alt_agl": 2.0,
+                "pressure": 1008.389048,
+                "pressure_weight": 0.000534,
+                "density_weight": 0.000541
+            },
+            {
+                "lat": 37.875664,
+                "lon": -122.257179,
+                "alt_asl": 127.0,
+                "alt_agl": 7.0,
+                "pressure": 1007.790238,
+                "pressure_weight": 0.000653,
+                "density_weight": 0.00066
+            },
+            {
+                "lat": 37.875557,
+                "lon": -122.256988,
+                "alt_asl": 133.0,
+                "alt_agl": 13.0,
+                "pressure": 1007.071667,
+                "pressure_weight": 0.001128,
+                "density_weight": 0.001139
+            },
+            {
+                "lat": 37.875327,
+                "lon": -122.256574,
+                "alt_asl": 146.0,
+                "alt_agl": 26.0,
+                "pressure": 1005.514762,
+                "pressure_weight": 0.001484,
+                "density_weight": 0.001495
+            },
+            {
+                "lat": 37.875114,
+                "lon": -122.256193,
+                "alt_asl": 158.0,
+                "alt_agl": 38.0,
+                "pressure": 1004.077619,
+                "pressure_weight": 0.001484,
+                "density_weight": 0.001492
+            },
+            {
+                "lat": 37.874884,
+                "lon": -122.255779,
+                "alt_asl": 171.0,
+                "alt_agl": 51.0,
+                "pressure": 1002.520714,
+                "pressure_weight": 0.001544,
+                "density_weight": 0.001548
+            },
+            {
+                "lat": 37.874653,
+                "lon": -122.255365,
+                "alt_asl": 184.0,
+                "alt_agl": 64.0,
+                "pressure": 1000.96381,
+                "pressure_weight": 0.001484,
+                "density_weight": 0.001485
+            },
+            {
+                "lat": 37.87444,
+                "lon": -122.254983,
+                "alt_asl": 196.0,
+                "alt_agl": 76.0,
+                "pressure": 999.526667,
+                "pressure_weight": 0.001425,
+                "density_weight": 0.001422
+            },
+            {
+                "lat": 37.874228,
+                "lon": -122.254601,
+                "alt_asl": 208.0,
+                "alt_agl": 88.0,
+                "pressure": 998.089524,
+                "pressure_weight": 0.001484,
+                "density_weight": 0.001479
+            },
+            {
+                "lat": 37.873997,
+                "lon": -122.254188,
+                "alt_asl": 221.0,
+                "alt_agl": 101.0,
+                "pressure": 996.532619,
+                "pressure_weight": 0.00374,
+                "density_weight": 0.003717
+            },
+            {
+                "lat": 37.873111,
+                "lon": -122.252596,
+                "alt_asl": 271.0,
+                "alt_agl": 151.0,
+                "pressure": 990.544524,
+                "pressure_weight": 0.005937,
+                "density_weight": 0.005846
+            },
+            {
+                "lat": 37.872224,
+                "lon": -122.251005,
+                "alt_asl": 321.0,
+                "alt_agl": 201.0,
+                "pressure": 984.556429,
+                "pressure_weight": 0.008902,
+                "density_weight": 0.008689
+            },
+            {
+                "lat": 37.870452,
+                "lon": -122.247823,
+                "alt_asl": 421.0,
+                "alt_agl": 301.0,
+                "pressure": 972.587609,
+                "pressure_weight": 0.011505,
+                "density_weight": 0.011371
+            },
+            {
+                "lat": 37.868679,
+                "lon": -122.244641,
+                "alt_asl": 521.0,
+                "alt_agl": 401.0,
+                "pressure": 961.348478,
+                "pressure_weight": 0.016714,
+                "density_weight": 0.016854
+            },
+            {
+                "lat": 37.865133,
+                "lon": -122.238276,
+                "alt_asl": 721.0,
+                "alt_agl": 601.0,
+                "pressure": 938.870217,
+                "pressure_weight": 0.022156,
+                "density_weight": 0.021932
+            },
+            {
+                "lat": 37.861588,
+                "lon": -122.231911,
+                "alt_asl": 921.0,
+                "alt_agl": 801.0,
+                "pressure": 916.654,
+                "pressure_weight": 0.021522,
+                "density_weight": 0.021401
+            },
+            {
+                "lat": 37.858042,
+                "lon": -122.225547,
+                "alt_asl": 1121.0,
+                "alt_agl": 1001.0,
+                "pressure": 895.454,
+                "pressure_weight": 0.036044,
+                "density_weight": 0.036583
+            },
+            {
+                "lat": 37.849179,
+                "lon": -122.209635,
+                "alt_asl": 1621.0,
+                "alt_agl": 1501.0,
+                "pressure": 843.94463,
+                "pressure_weight": 0.049692,
+                "density_weight": 0.04934
+            },
+            {
+                "lat": 37.840315,
+                "lon": -122.193723,
+                "alt_asl": 2121.0,
+                "alt_agl": 2001.0,
+                "pressure": 795.212931,
+                "pressure_weight": 0.060292,
+                "density_weight": 0.060731
+            },
+            {
+                "lat": 37.826133,
+                "lon": -122.168265,
+                "alt_asl": 2921.0,
+                "alt_agl": 2801.0,
+                "pressure": 722.321129,
+                "pressure_weight": 0.752276,
+                "density_weight": 0.752276
+            }
+        ],
+        "release_points_below_minimum": 0,
+        "release_points_above_maximum": 0,
+        "sun_elevation": 16.304674,
+        "sun_azimuth": 125.21165,
+        "surface_pressure": 1008.628571
+    }
+}

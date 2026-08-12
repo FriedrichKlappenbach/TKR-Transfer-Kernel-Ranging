@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+.env
+.idea/
+*.egg-info/
+.vscode/
+demo_output/
+
+demo_data_allpeaks/traj/*
+!demo_data_allpeaks/traj/20161103-1600-SF_LAB-total-column/
+!demo_data_allpeaks/traj/20161103-1615-SF_LAB-total-column/

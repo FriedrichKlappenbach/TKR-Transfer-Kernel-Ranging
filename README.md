@@ -34,7 +34,7 @@ observed enhancements with the derived transport kernel.*
 | `tkr_functions.py` | All non-trivial logic (observation loading, geometry, trajectory handling, segmentation, kernel fitting, I/O, KMZ export). The notebook is mostly a thin wrapper around this module. |
 | `config.json` | Run configuration — paths and method parameters (see below). |
 | `figures/` | Output figures land here when the notebook is run (`Figure1.png`, `Figure2.png`, ...). The versions shown in this README/the paper are also checked in here for reference. |
-|`demo_data_allpeaks/`| Incomplete dataset of thrajectories (size Limitation by GitHub). Full data can be downloaded here: 10.5281/zenodo.21913882 |
+|`demo_data_allpeaks/`| Incomplete dataset of thrajectories (size Limitation by GitHub). Full data can be downloaded here: **https://doi.org/10.5281/zenodo.21913882** |
 
 The full method derivation, all equations, and the physical interpretation of every
 quantity below are in the paper (Sect. 2, Appendices A–H) — this README documents the
@@ -48,7 +48,7 @@ This repository ships **with limited processing data**. The accompanying dataset
 ensembles for every analysed peak, plus the aggregated density/site metadata and the raw
 EM27/SUN PROFFAST 2.4/GGG2020 retrieval bundle) is included — the full per-particle trajectory data
 alone is on the order of a few GB per peak and **~8 GB in total** for the case study in
-the paper, which is impractical to version in Git, but can be downloaded here: 10.5281/zenodo.21913882
+the paper, which is impractical to version in Git, but can be downloaded here: **https://doi.org/10.5281/zenodo.21913882**
 
 ### Expected folder layout
 
@@ -88,7 +88,7 @@ Receptor location and altitude are plain values in `config.json` (`receptor_lat`
 
 ## Running the pipeline
 
-*download* remaining data under 10.5281/zenodo.21913882 and store it in the ./demo_data_allpeaks/traj
+*download* remaining data under **https://doi.org/10.5281/zenodo.21913882** and store it in the ./demo_data_allpeaks/traj
 
 ```bash
 pip install numpy pandas scipy matplotlib pvlib simplekml jupyter

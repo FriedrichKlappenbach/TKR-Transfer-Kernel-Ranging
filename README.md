@@ -15,7 +15,7 @@ the released method/paper name is **Transfer-Kernel Ranging (TKR)**. All code, f
 variable names in this repository use `TKR` / `tkr_*`.
 
 <p align="center">
-  <img src="figures/Figure1.png" alt="Observed methane enhancement with detected peaks" width="600">
+  <img src="figures/Figure2.png" alt="Observed methane enhancement with detected peaks" width="600">
 </p>
 
 *Figure 1: periodic methane enhancement of ~10 ppb every 12 minutes, observed at UC

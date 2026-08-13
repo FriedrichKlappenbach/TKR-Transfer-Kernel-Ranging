@@ -1,18 +1,22 @@
 {
-  "_comment": "Consolidated config for the LSP demo notebook. Paths are relative to the notebook's working directory.",
+  "_comment": "Consolidated config for the TKR demo notebook. Paths are relative to the notebook's working directory.",
 
   "campaign_name": "SFBA",
   "date": "20161103",
   "site_dw": "ma",
   "site_id": "SF_LAB",
 
-  "data_dir": "./demo_data",
-  "traj_dir": "./demo_data/traj",
-  "df_dens_path": "./demo_data/df_dens.parquet",
-  "site_params_path": "./demo_data/site_params.pkl",
-  "observations_path": "./demo_data/em27-retrieval-bundle-ma-proffast-2_4-GGG2020-20161102-20161104.parquet",
-  "peak_data_path": "./demo_data/peak_data.parquet",
-  "averaging_kernel_path": "./demo_data/ma_avk_CH4_2020.json",
+  "receptor_lat": 37.875778811697415,
+  "receptor_lon": -122.25742163095923,
+  
+  "receptor_alt_asl_m": 124,
+
+  "data_dir": "./demo_data_allpeaks/",
+  "traj_dir": "./demo_data_allpeaks/traj",
+  "df_dens_path": "./demo_data_allpeaks/df_dens.parquet",
+  "observations_path": "./demo_data_allpeaks/em27-retrieval-bundle-ma-proffast-2_4-GGG2020-20161102-20161104.parquet",
+  "peak_data_path": "./demo_data_allpeaks/peak_data.parquet",
+  "averaging_kernel_path": "./demo_data_allpeaks/ma_avk_CH4_2020.json",
   "output_dir": "./demo_output",
 
   "target_gas": "ch4",

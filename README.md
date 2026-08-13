@@ -46,7 +46,7 @@ quantity below are in the paper (Sect. 2, Appendices A–H) — this README docu
 
 This repository ships **with limited processing data**. The accompanying dataset (backward-trajectory
 ensembles for every analysed peak, plus the aggregated density/site metadata and the raw
-EM27/SUN retrieval bundle) is included — the full per-particle trajectory data
+EM27/SUN PROFFAST 2.4/GGG2020 retrieval bundle) is included — the full per-particle trajectory data
 alone is on the order of a few GB per peak and **~8 GB in total** for the case study in
 the paper, which is impractical to version in Git, but can be downloaded here: 10.5281/zenodo.21913882
 
@@ -236,9 +236,16 @@ One folder per analysed peak (paper Sect. 2.3), containing:
   (minutes, negative = backward), `lati`, `long`, `zagl`, `zasl`, `dens` (air density
   along the trajectory), `foot` (STILT surface-influence footprint).
 
-This is standard STILT/HYSPLIT output (Lin et al., 2003; Fasoli et al., 2018) exported
-per receptor release point; see the paper's Sect. 2.3 for the trajectory configuration
-used in the case study (500 particles/receptor, 1-minute steps, HRRRv1 meteorology).
+These trajectories were generated using RETRO (Oliveira Makowski et. al., 2026) running
+HYSPLIT (Stein et al. 2015) using the STILT transport mode (Lin et al., 2003;  Loughner
+et al., 2021). See the paper's Sect. 2.3 for the trajectory configuration used in the case
+study (500 particles/receptor, 1-minute steps, HRRRv1 meteorology).
+
+### EM27/SUN Retrieval Bundle
+
+The EM27/SUN data was retrieved using the EM27 Retrieval Pipeline (Makowski et al., 2026)
+running Proffast 2.4 (Hase et al., 2025) using the ProffastPylot (Feld et al., 2024) under
+the hood. It uses GGG2020 (Laughner et al., 2024) as an atmospheric prior.
 
 ---
 

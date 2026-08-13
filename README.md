@@ -18,8 +18,11 @@ variable names in this repository use `TKR` / `tkr_*`.
   <img src="figures/Figure2.png" alt="Observed methane enhancement with detected peaks" width="600">
 </p>
 
-*Figure 1: periodic methane enhancement of ~10 ppb every 12 minutes, observed at UC
-Berkeley on 3 November 2016 — the case study this repository reproduces.*
+*Figure 1: Backward particle trajectories of one altitude shown from the receptor point (bottom left) traveling 
+backward in time in ENE direction. These particles are separated into sections as shown above. Each section has 
+own transport kernel, three examples shown in the left panels. The further the particles move from the
+recepotr point, the broader the kernel gets. TKR derives an optimal estimate for the upwind distance comparing the
+observed enhancements with the derived transport kernel.*
 
 ---
 
@@ -31,6 +34,7 @@ Berkeley on 3 November 2016 — the case study this repository reproduces.*
 | `tkr_functions.py` | All non-trivial logic (observation loading, geometry, trajectory handling, segmentation, kernel fitting, I/O, KMZ export). The notebook is mostly a thin wrapper around this module. |
 | `config.json` | Run configuration — paths and method parameters (see below). |
 | `figures/` | Output figures land here when the notebook is run (`Figure1.png`, `Figure2.png`, ...). The versions shown in this README/the paper are also checked in here for reference. |
+|`demo_data_allpeaks/`| Incomplete dataset of thrajectories (size Limitation by GitHub). Full data can be downloaded here: 10.5281/zenodo.21913882 |
 
 The full method derivation, all equations, and the physical interpretation of every
 quantity below are in the paper (Sect. 2, Appendices A–H) — this README documents the
@@ -40,11 +44,11 @@ quantity below are in the paper (Sect. 2, Appendices A–H) — this README docu
 
 ## Data: not included in this repository
 
-This repository ships **code only**. The accompanying dataset (backward-trajectory
+This repository ships **with limited processing data**. The accompanying dataset (backward-trajectory
 ensembles for every analysed peak, plus the aggregated density/site metadata and the raw
-EM27/SUN retrieval bundle) is **not included** — the full per-particle trajectory data
+EM27/SUN retrieval bundle) is included — the full per-particle trajectory data
 alone is on the order of a few GB per peak and **~8 GB in total** for the case study in
-the paper, which is impractical to version in Git.
+the paper, which is impractical to version in Git, but can be downloaded here: 10.5281/zenodo.21913882
 
 ### Expected folder layout
 
@@ -80,41 +84,17 @@ Receptor location and altitude are plain values in `config.json` (`receptor_lat`
 `receptor_lon`, `receptor_alt_asl_m`) rather than a separate file — see the note on
 `site_params.pkl` below for why that file isn't part of this repository's data flow.
 
-### Hosting the dataset: recommendations
-
-For ~8 GB of static, versioned scientific data attached to a paper, in rough order of
-preference:
-
-1. **[Zenodo](https://zenodo.org/)** — free, gives a permanent DOI you can cite directly
-   in the paper's *Data availability* statement, has no practical size problem at 8 GB
-   (limit is 50 GB/record on the free tier), and is the de-facto standard for
-   "data accompanying a publication" in the atmospheric-sciences community. This is
-   almost certainly the right default choice given the paper already promises the
-   processed data "will be made publicly available ... upon publication."
-2. **An institutional repository** (e.g. TUM's own data repository, or a
-   university/library-hosted store), if your institution has one and requires or
-   prefers you use it for funded-project outputs.
-3. **A cloud bucket with public read access** (S3, GCS, or an Azure Blob container) if
-   you want direct `wget`/`curl`/`boto3` download without a landing page — cheap at this
-   size, but doesn't give you a citable DOI on its own (Zenodo can still be used for the
-   citable "release" pointer even if the bulk bytes live in a bucket).
-4. **Figshare / OSF** are reasonable alternatives to Zenodo with similar properties
-   (free, DOI, discipline-agnostic); pick whichever your co-authors/institution already
-   use for other datasets, mainly for consistency.
-
-Whichever you choose, keep the archive as one `.zip`/`.tar.gz` matching the folder
-layout above (or a small number of them, e.g. one per site/day) so a single download +
-unpack reproduces the paths `config.json` expects, and add the resulting DOI/link at the
-top of this README once published.
-
 ---
 
 ## Running the pipeline
+
+*download* remaining data under 10.5281/zenodo.21913882 and store it in the ./demo_data_allpeaks/traj
 
 ```bash
 pip install numpy pandas scipy matplotlib pvlib simplekml jupyter
 jupyter notebook TKR_full_pipeline.ipynb
 ```
+
 
 `simplekml` is only needed for the Figure 6 (Google Earth) export cell at the end;
 everything else only needs `numpy`, `pandas`, `scipy`, `matplotlib`, and `pvlib`.
